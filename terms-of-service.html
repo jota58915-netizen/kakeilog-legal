@@ -1,0 +1,414 @@
+<title>KakeiLog 利用規約 / Terms of Service</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --ink: #23261f;
+    --sub: #5c6357;
+    --line: #e1ddd0;
+    --accent: #24503a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  }
+  :root[data-theme="dark"] { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  :root[data-theme="light"] { --bg: #f7f6f2; --card: #ffffff; --ink: #23261f; --sub: #5c6357; --line: #e1ddd0; --accent: #24503a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+    line-height: 1.75;
+  }
+  .bar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .bar .brand { font-weight: 700; font-size: 0.95rem; }
+  .bar .brand a { color: var(--ink); text-decoration: none; }
+  .toggle { display: flex; gap: 6px; }
+  .toggle button {
+    font: inherit; font-size: 0.8rem; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--sub); cursor: pointer;
+  }
+  .toggle button.on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  main { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; text-wrap: balance; }
+  .updated { color: var(--sub); font-size: 0.82rem; margin: 0 0 12px; }
+  .toc { font-size: 0.85rem; color: var(--sub); margin: 0 0 32px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+  .toc a { color: var(--sub); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+  .toc ol { margin: 6px 0 0; padding-left: 1.2em; columns: 2; }
+  .toc li { margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; margin: 2.2em 0 0.6em; border-top: 1px solid var(--line); padding-top: 1.4em; scroll-margin-top: 70px; }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.6em; }
+  h3 { font-size: 0.92rem; margin: 1.4em 0 0.5em; }
+  p, li { font-size: 0.92rem; color: var(--ink); }
+  ul, ol.body-list { padding-left: 1.3em; }
+  li { margin-bottom: 0.5em; }
+  a { color: var(--accent); }
+  .callout {
+    background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 12px 14px; font-size: 0.86rem; color: var(--sub); margin: 0.8em 0;
+  }
+  .lang { display: none; }
+  .lang.on { display: block; }
+
+  @page {
+    size: A4;
+    margin: 18mm 18mm 20mm;
+  }
+  @media print {
+    .bar { display: none !important; }
+    body { display: block; background: #fff; color: #000; }
+    main { margin: 0; max-width: 100%; padding: 0; }
+    .lang { display: block !important; }
+    #lang-en, #lang-zh { break-before: page; page-break-before: always; margin-top: 0; }
+    h2, h3, table, .toc, .callout, li, tr, thead { break-inside: avoid; page-break-inside: avoid; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+    thead { display: table-header-group; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    a::after { content: none !important; }
+  }
+</style>
+
+<div class="bar">
+  <span class="brand">KakeiLog</span>
+  <div class="toggle">
+    <button id="btn-ja" class="on" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
+</div>
+
+<main>
+  <div id="lang-ja" class="lang on">
+    <h1>KakeiLog 利用規約</h1>
+    <p class="updated">最終更新日: 2026年7月21日（第1版）</p>
+
+    <nav class="toc">
+      目次
+      <ol>
+        <li><a href="#ja-1">適用</a></li>
+        <li><a href="#ja-2">定義</a></li>
+        <li><a href="#ja-3">アカウント登録</a></li>
+        <li><a href="#ja-4">禁止事項</a></li>
+        <li><a href="#ja-5">無料版とPremium（有料）機能</a></li>
+        <li><a href="#ja-6">サブスクリプションの自動更新</a></li>
+        <li><a href="#ja-7">利用者が入力するデータの取扱い</a></li>
+        <li><a href="#ja-8">知的財産権</a></li>
+        <li><a href="#ja-9">為替レート・計算結果に関する免責</a></li>
+        <li><a href="#ja-10">免責事項・保証の否認</a></li>
+        <li><a href="#ja-11">責任の制限</a></li>
+        <li><a href="#ja-12">利用停止・登録抹消</a></li>
+        <li><a href="#ja-13">サービス内容の変更・終了</a></li>
+        <li><a href="#ja-14">LINE連携に関する留意事項</a></li>
+        <li><a href="#ja-15">本規約の変更</a></li>
+        <li><a href="#ja-16">分離可能性</a></li>
+        <li><a href="#ja-17">準拠法・管轄</a></li>
+        <li><a href="#ja-18">お問い合わせ</a></li>
+      </ol>
+    </nav>
+
+    <p>本利用規約（以下「本規約」）は、個人開発者（以下「開発者」「当方」）が提供する家計簿アプリ「KakeiLog」（以下「本アプリ」）の利用条件を定めるものです。本アプリの個人情報の取り扱いについては、別途プライバシーポリシーをご確認ください。</p>
+
+    <h2 id="ja-1">1. 適用</h2>
+    <p>本規約は、本アプリの利用に関する開発者と利用者との間の一切の関係に適用されます。利用者は、本アプリをダウンロード・利用することにより、本規約の内容に同意したものとみなされます。本規約に同意いただけない場合、本アプリを利用することはできません。</p>
+
+    <h2 id="ja-2">2. 定義</h2>
+    <ul>
+      <li><strong>「本サービス」</strong>とは、本アプリおよびこれに付随する一切の機能（LINE Bot連携、Premiumサブスクリプション等を含む）をいいます。</li>
+      <li><strong>「利用者データ」</strong>とは、利用者が本アプリに入力・記録する取引記録、ウォレット情報、予算、貯蓄目標その他一切の情報をいいます。</li>
+    </ul>
+
+    <h2 id="ja-3">3. アカウント登録</h2>
+    <ul>
+      <li>本サービスの利用には、メールアドレスによるアカウント登録が必要です。</li>
+      <li>利用者は、登録情報を正確かつ最新の状態に保つものとします。</li>
+      <li>アカウント情報（パスワードを含む）の管理は利用者自身の責任で行うものとし、第三者による不正利用について、当方は利用者の故意または過失による場合を除き責任を負いません。</li>
+      <li>本サービスは13歳未満のお子様を対象としていません。未成年の方は、法定代理人の同意を得たうえでご利用ください。</li>
+    </ul>
+
+    <h2 id="ja-4">4. 禁止事項</h2>
+    <p>利用者は、本サービスの利用にあたり、以下の行為をしてはならないものとします。</p>
+    <ul>
+      <li>法令または公序良俗に違反する行為</li>
+      <li>他の利用者、第三者、または当方の権利・利益を侵害する行為</li>
+      <li>本サービスのサーバーやネットワークに過度な負荷をかける行為、不正アクセスを試みる行為</li>
+      <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブルその他ソースコードを解析する行為（法令上認められる場合を除く）</li>
+      <li>本サービスを通じて取得した他の利用者の情報を、本人の同意なく利用・開示する行為</li>
+      <li>LINE Bot機能を、自動化されたスパム送信等、本来の目的以外に利用する行為</li>
+      <li>その他、当方が不適切と合理的に判断する行為</li>
+    </ul>
+
+    <h2 id="ja-5">5. 無料版とPremium（有料）機能</h2>
+    <p>本アプリは、基本的な家計簿機能を無料でご利用いただけます。ウォレット・カテゴリの追加編集、CSVエクスポート、サブスクリプション管理等の一部機能は、Premiumプラン（有料サブスクリプション）でのみご利用いただけます。Premiumプランの内容・価格は、App Store / Google Play上の表示に従い、予告のうえ変更される場合があります。</p>
+
+    <h2 id="ja-6">6. サブスクリプションの自動更新</h2>
+    <div class="callout">
+      <p>Premiumプランは自動更新のサブスクリプションです。購入を確定すると、選択したプラン（月額・年額等）の代金がApple ID / Googleアカウントに請求されます。現在の期間終了の24時間以上前に自動更新をオフにしない限り、サブスクリプションは自動的に更新され、更新料金が現在の期間終了までの24時間以内に請求されます。無料トライアルを提供している場合、有料プランへの切り替え時点で未使用のトライアル期間は失効します。</p>
+      <p>サブスクリプションの管理・自動更新のオフは、購入後にiOSの「設定」アプリ内のApple IDメニュー、またはGoogle Playアプリのアカウント設定から行うことができます。決済は各プラットフォーム（Apple / Google）を通じて行われるため、返金についても各プラットフォームの規約・ポリシーが適用されます。</p>
+    </div>
+
+    <h2 id="ja-7">7. 利用者が入力するデータの取扱い</h2>
+    <p>利用者データの所有権は利用者に帰属します。当方は、本サービスを提供する目的の範囲内でのみ利用者データを取り扱い、その取扱いの詳細はプライバシーポリシーに定めるとおりとします。利用者は、アプリ内の設定画面からいつでも自身のアカウントおよび利用者データを削除できます。</p>
+
+    <h2 id="ja-8">8. 知的財産権</h2>
+    <p>本アプリの名称、ロゴ、デザイン、プログラム等に関する著作権・商標権その他一切の知的財産権は、開発者または正当な権利者に帰属します。利用者は、本規約で明示的に許諾される場合を除き、これらを複製、改変、頒布、商用利用してはならないものとします。</p>
+
+    <h2 id="ja-9">9. 為替レート・計算結果に関する免責</h2>
+    <p>本アプリで表示される為替レートは、無料の外部サービス（api.frankfurter.dev）から取得した参考値であり、実際の金融機関が提供するレートとは異なる場合があります。また、通信状況等により最新のレートを取得できない場合、直近に取得済みのレートが表示されることがあります。本アプリは家計管理を補助するツールであり、投資・税務・その他の財務上の助言を提供するものではありません。本アプリの計算結果・表示内容を利用した判断により生じた損害について、当方は責任を負いません。</p>
+
+    <h2 id="ja-10">10. 免責事項・保証の否認</h2>
+    <p>当方は、本サービスについて、特定の目的への適合性、正確性、完全性、安全性、継続的な利用可能性等を含め、明示または黙示を問わずいかなる保証も行いません。本サービスは「現状有姿」で提供されます。当方は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定目的への適合性、セキュリティ等に関する欠陥・エラー・不具合を含みます）がないことを保証しません。</p>
+
+    <h2 id="ja-11">11. 責任の制限</h2>
+    <p>当方は、本サービスに起因して利用者に生じた損害について、当方の故意または重過失による場合を除き、一切の責任を負わないものとします。当方が責任を負う場合であっても、その責任範囲は、有料サービスにおいては利用者が当該損害の原因となった月に当方に支払った利用料金の額を上限とします。</p>
+
+    <h2 id="ja-12">12. 利用停止・登録抹消</h2>
+    <p>当方は、利用者が本規約に違反した場合、その他当方が本サービスの利用を適当でないと判断した場合、事前の通知なく、当該利用者への本サービスの提供を停止し、またはアカウント登録を抹消することができるものとします。利用者は、アプリ内の設定画面からいつでも自らアカウントを削除し、本サービスの利用を終了することができます。</p>
+
+    <h2 id="ja-13">13. サービス内容の変更・終了</h2>
+    <p>当方は、利用者への事前の通知をもって、本サービスの内容を変更し、または本サービスの提供を中断・終了することができるものとします。これにより利用者に生じた損害について、当方は責任を負いません。</p>
+
+    <h2 id="ja-14">14. LINE連携に関する留意事項</h2>
+    <p>LINE連携機能は、LINE株式会社が提供するLINE Messaging APIを利用します。同機能の利用にあたっては、LINE株式会社の定める利用規約・ガイドラインも適用されます。LINE側のサービス仕様変更等により、LINE連携機能の全部または一部が予告なく利用できなくなる場合があります。</p>
+
+    <h2 id="ja-15">15. 本規約の変更</h2>
+    <p>当方は、必要と判断した場合、利用者に通知することにより、本規約を変更できるものとします。変更後の本規約は、本ページに掲載した時点から効力を生じるものとし、変更後に利用者が本サービスを利用した場合、変更後の規約に同意したものとみなします。</p>
+
+    <h2 id="ja-16">16. 分離可能性</h2>
+    <p>本規約のいずれかの条項またはその一部が無効または執行不能と判断された場合であっても、本規約の残りの部分は引き続き完全に効力を有するものとします。</p>
+
+    <h2 id="ja-17">17. 準拠法・管轄</h2>
+    <p>本規約の解釈にあたっては日本法を準拠法とします。本サービスに関して開発者と利用者との間で紛争が生じた場合には、開発者の住所地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+    <h2 id="ja-18">18. お問い合わせ</h2>
+    <p>本規約に関するお問い合わせは、下記までご連絡ください。</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+
+  <div id="lang-en" class="lang">
+    <h1>KakeiLog Terms of Service</h1>
+    <p class="updated">Last updated: July 21, 2026 (v1)</p>
+
+    <nav class="toc">
+      Contents
+      <ol>
+        <li><a href="#en-1">Acceptance of Terms</a></li>
+        <li><a href="#en-2">Definitions</a></li>
+        <li><a href="#en-3">Account Registration</a></li>
+        <li><a href="#en-4">Prohibited Conduct</a></li>
+        <li><a href="#en-5">Free Tier and Premium Features</a></li>
+        <li><a href="#en-6">Subscription Auto-Renewal</a></li>
+        <li><a href="#en-7">Handling of User-Entered Data</a></li>
+        <li><a href="#en-8">Intellectual Property</a></li>
+        <li><a href="#en-9">Exchange Rate and Calculation Disclaimer</a></li>
+        <li><a href="#en-10">Disclaimer of Warranties</a></li>
+        <li><a href="#en-11">Limitation of Liability</a></li>
+        <li><a href="#en-12">Suspension and Termination</a></li>
+        <li><a href="#en-13">Changes to or Discontinuation of the Service</a></li>
+        <li><a href="#en-14">LINE Integration Notice</a></li>
+        <li><a href="#en-15">Changes to These Terms</a></li>
+        <li><a href="#en-16">Severability</a></li>
+        <li><a href="#en-17">Governing Law</a></li>
+        <li><a href="#en-18">Contact</a></li>
+      </ol>
+    </nav>
+
+    <p>These Terms of Service ("Terms") set out the conditions under which the independent developer ("we", "the developer") behind the household budgeting app KakeiLog ("the App") provides the App to you. For information on how we handle personal data, please see our Privacy Policy.</p>
+
+    <h2 id="en-1">1. Acceptance of Terms</h2>
+    <p>These Terms apply to all interactions between the developer and users in connection with the App. By downloading or using the App, you are deemed to accept these Terms. If you do not agree to these Terms, you may not use the App.</p>
+
+    <h2 id="en-2">2. Definitions</h2>
+    <ul>
+      <li><strong>"the Service"</strong> means the App and all associated functionality, including LINE bot integration and Premium subscriptions.</li>
+      <li><strong>"User Data"</strong> means transactions, wallet information, budgets, savings goals, and any other information you enter into or record within the App.</li>
+    </ul>
+
+    <h2 id="en-3">3. Account Registration</h2>
+    <ul>
+      <li>Using the Service requires registering an account with an email address.</li>
+      <li>You agree to keep your registration information accurate and up to date.</li>
+      <li>You are responsible for safeguarding your account credentials, including your password. Except where caused by our intentional misconduct or negligence, we are not liable for unauthorized use of your account by a third party.</li>
+      <li>The Service is not directed at children under 13. If you are a minor, you should use the Service only with the consent of a parent or legal guardian.</li>
+    </ul>
+
+    <h2 id="en-4">4. Prohibited Conduct</h2>
+    <p>When using the Service, you must not:</p>
+    <ul>
+      <li>Violate any applicable law or public order and morals</li>
+      <li>Infringe the rights or interests of other users, third parties, or the developer</li>
+      <li>Place an excessive load on the Service's servers or network, or attempt unauthorized access</li>
+      <li>Reverse-engineer, decompile, or disassemble the App, except to the extent permitted by law</li>
+      <li>Use another user's information obtained through the Service without their consent</li>
+      <li>Use the LINE bot feature for automated spam or any purpose other than its intended use</li>
+      <li>Engage in any other conduct we reasonably deem inappropriate</li>
+    </ul>
+
+    <h2 id="en-5">5. Free Tier and Premium Features</h2>
+    <p>Core budgeting features are available free of charge. Certain features — including adding/editing wallets and categories, CSV export, and subscription tracking — are available only with the Premium plan (a paid subscription). The content and price of the Premium plan follow what is displayed on the App Store / Google Play and may change with notice.</p>
+
+    <h2 id="en-6">6. Subscription Auto-Renewal</h2>
+    <div class="callout">
+      <p>The Premium plan is an auto-renewing subscription. Payment will be charged to your Apple ID or Google account upon confirmation of purchase. Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.</p>
+      <p>You can manage your subscription and turn off auto-renewal at any time from your Apple ID account settings (in the iOS Settings app) or from your Google Play account settings. Because payment is processed through the Apple App Store or Google Play, refunds are subject to each platform's own policies.</p>
+    </div>
+
+    <h2 id="en-7">7. Handling of User-Entered Data</h2>
+    <p>You retain ownership of your User Data. We process your User Data only to the extent necessary to provide the Service, as described in our Privacy Policy. You can delete your account and User Data at any time from the in-app Settings screen.</p>
+
+    <h2 id="en-8">8. Intellectual Property</h2>
+    <p>All copyrights, trademarks, and other intellectual property rights in the App's name, logo, design, and software belong to the developer or the applicable rights holders. Except as expressly permitted under these Terms, you may not copy, modify, distribute, or commercially exploit them.</p>
+
+    <h2 id="en-9">9. Exchange Rate and Calculation Disclaimer</h2>
+    <p>Exchange rates displayed in the App are reference values obtained from a free third-party service (api.frankfurter.dev) and may differ from rates offered by financial institutions. If a current rate cannot be retrieved due to connectivity issues, the most recently retrieved rate may be shown instead. The App is a personal budgeting aid and does not provide investment, tax, or other financial advice. We are not liable for any loss resulting from decisions made based on the App's calculations or displayed information.</p>
+
+    <h2 id="en-10">10. Disclaimer of Warranties</h2>
+    <p>We make no warranty, express or implied, regarding the Service, including as to fitness for a particular purpose, accuracy, completeness, safety, or continued availability. The Service is provided "as is." We do not warrant that the Service is free of defects, errors, or bugs, whether or not they affect its safety, reliability, accuracy, completeness, effectiveness, or fitness for a particular purpose.</p>
+
+    <h2 id="en-11">11. Limitation of Liability</h2>
+    <p>Except where caused by our intentional misconduct or gross negligence, we are not liable for any damage arising from your use of the Service. Where we are liable, our total liability for any paid portion of the Service is limited to the amount you paid to us in the month in which the damage occurred.</p>
+
+    <h2 id="en-12">12. Suspension and Termination</h2>
+    <p>We may suspend your access to the Service or terminate your account without prior notice if you violate these Terms or if we otherwise reasonably determine that your continued use of the Service is inappropriate. You may delete your own account and stop using the Service at any time from the in-app Settings screen.</p>
+
+    <h2 id="en-13">13. Changes to or Discontinuation of the Service</h2>
+    <p>We may change the content of the Service, or suspend or discontinue it, with prior notice to users. We are not liable for any damage this causes you.</p>
+
+    <h2 id="en-14">14. LINE Integration Notice</h2>
+    <p>The LINE integration feature uses the LINE Messaging API provided by LINE Corporation. Use of this feature is also subject to LINE Corporation's own terms and guidelines. Changes to LINE's own service specifications may cause part or all of the LINE integration feature to become unavailable without notice.</p>
+
+    <h2 id="en-15">15. Changes to These Terms</h2>
+    <p>We may revise these Terms when we deem it necessary, by notifying users. Revised Terms take effect from the moment they are posted on this page, and your continued use of the Service after that point constitutes acceptance of the revised Terms.</p>
+
+    <h2 id="en-16">16. Severability</h2>
+    <p>If any provision of these Terms, or part of a provision, is found to be invalid or unenforceable, the remainder of these Terms will remain in full force and effect.</p>
+
+    <h2 id="en-17">17. Governing Law</h2>
+    <p>These Terms are governed by the laws of Japan. Any dispute arising in connection with the Service between the developer and a user shall be subject to the exclusive jurisdiction of the court having jurisdiction over the developer's place of residence as the court of first instance.</p>
+
+    <h2 id="en-18">18. Contact</h2>
+    <p>For questions about these Terms, please contact:</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+
+  <div id="lang-zh" class="lang">
+    <h1>KakeiLog 服务条款</h1>
+    <p class="updated">最后更新日期：2026年7月21日（第1版）</p>
+
+    <nav class="toc">
+      目录
+      <ol>
+        <li><a href="#zh-1">适用范围</a></li>
+        <li><a href="#zh-2">定义</a></li>
+        <li><a href="#zh-3">账户注册</a></li>
+        <li><a href="#zh-4">禁止行为</a></li>
+        <li><a href="#zh-5">免费版与Premium（付费）功能</a></li>
+        <li><a href="#zh-6">订阅的自动续订</a></li>
+        <li><a href="#zh-7">用户输入数据的处理</a></li>
+        <li><a href="#zh-8">知识产权</a></li>
+        <li><a href="#zh-9">汇率・计算结果免责声明</a></li>
+        <li><a href="#zh-10">免责声明・不保证条款</a></li>
+        <li><a href="#zh-11">责任限制</a></li>
+        <li><a href="#zh-12">暂停使用・注销账户</a></li>
+        <li><a href="#zh-13">服务内容的变更・终止</a></li>
+        <li><a href="#zh-14">LINE联动相关注意事项</a></li>
+        <li><a href="#zh-15">本条款的变更</a></li>
+        <li><a href="#zh-16">可分割性</a></li>
+        <li><a href="#zh-17">适用法律・管辖</a></li>
+        <li><a href="#zh-18">联系方式</a></li>
+      </ol>
+    </nav>
+
+    <p>本服务条款（以下称“本条款”）规定了个人开发者（以下称“开发者”“我们”）提供的家庭记账应用「KakeiLog」（以下称“本应用”）的使用条件。关于本应用对个人信息的处理方式，请另行查阅隐私政策。</p>
+
+    <h2 id="zh-1">1. 适用范围</h2>
+    <p>本条款适用于开发者与用户之间因使用本应用而产生的一切关系。用户下载或使用本应用，即视为同意本条款的内容。如不同意本条款，则不得使用本应用。</p>
+
+    <h2 id="zh-2">2. 定义</h2>
+    <ul>
+      <li><strong>“本服务”</strong>指本应用及与之相关的一切功能（包括LINE Bot联动、Premium订阅等）。</li>
+      <li><strong>“用户数据”</strong>指用户在本应用中输入或记录的交易记录、钱包信息、预算、储蓄目标及其他一切信息。</li>
+    </ul>
+
+    <h2 id="zh-3">3. 账户注册</h2>
+    <ul>
+      <li>使用本服务需要通过电子邮件地址注册账户。</li>
+      <li>用户应确保注册信息准确并保持最新。</li>
+      <li>账户信息（包括密码）由用户自行负责管理，除因我们的故意或过失导致外，我们对第三方擅自使用账户不承担责任。</li>
+      <li>本服务不面向13岁以下儿童。未成年人应在监护人同意后使用本服务。</li>
+    </ul>
+
+    <h2 id="zh-4">4. 禁止行为</h2>
+    <p>用户在使用本服务时，不得进行以下行为：</p>
+    <ul>
+      <li>违反法律法规或公序良俗的行为</li>
+      <li>侵害其他用户、第三方或我们权益的行为</li>
+      <li>对本服务的服务器或网络造成过度负担、尝试未经授权访问的行为</li>
+      <li>对本应用进行反向工程、反编译、反汇编或以其他方式解析源代码的行为（法律允许的情形除外）</li>
+      <li>未经本人同意，使用通过本服务获取的其他用户信息的行为</li>
+      <li>将LINE Bot功能用于自动化垃圾信息发送等本来用途以外的行为</li>
+      <li>其他我们合理认定为不当的行为</li>
+    </ul>
+
+    <h2 id="zh-5">5. 免费版与Premium（付费）功能</h2>
+    <p>本应用的基本记账功能可免费使用。钱包・类别的新增编辑、CSV导出、订阅管理等部分功能，仅限Premium方案（付费订阅）用户使用。Premium方案的内容・价格以App Store / Google Play上的显示为准，可能会在通知后发生变更。</p>
+
+    <h2 id="zh-6">6. 订阅的自动续订</h2>
+    <div class="callout">
+      <p>Premium方案为自动续订订阅。确认购买后，所选方案（月付・年付等）的费用将从您的Apple ID / Google账户中扣除。除非您在当前订阅期结束前至少24小时关闭自动续订，否则订阅将自动续订，续订费用将在当前订阅期结束前24小时内扣除。如提供免费试用，一旦购买付费方案，未使用的试用期将失效。</p>
+      <p>购买后，您可以通过iOS「设置」应用中的Apple ID菜单，或Google Play应用的账户设置来管理订阅・关闭自动续订。由于支付通过各平台（Apple / Google）处理，退款事宜也适用各平台自身的条款与政策。</p>
+    </div>
+
+    <h2 id="zh-7">7. 用户输入数据的处理</h2>
+    <p>用户数据的所有权归用户所有。我们仅在提供本服务所必需的范围内处理用户数据，具体处理方式以隐私政策的规定为准。用户可随时在应用内的设置页面删除自己的账户及用户数据。</p>
+
+    <h2 id="zh-8">8. 知识产权</h2>
+    <p>本应用的名称、标志、设计、程序等相关的著作权、商标权及其他一切知识产权，归开发者或正当权利人所有。除本条款明确许可的情形外，用户不得复制、修改、分发或将其用于商业用途。</p>
+
+    <h2 id="zh-9">9. 汇率・计算结果免责声明</h2>
+    <p>本应用显示的汇率是从免费的外部服务（api.frankfurter.dev）获取的参考值，可能与实际金融机构提供的汇率有所不同。若因网络状况等原因无法获取最新汇率，可能会显示最近一次获取的汇率。本应用是辅助家庭理财的工具，不提供投资、税务或其他财务方面的建议。因使用本应用的计算结果・显示内容作出判断而产生的损失，我们不承担责任。</p>
+
+    <h2 id="zh-10">10. 免责声明・不保证条款</h2>
+    <p>我们对本服务不作任何明示或默示的保证，包括但不限于对特定目的的适用性、准确性、完整性、安全性、持续可用性等。本服务按“现状”提供。我们不保证本服务不存在事实上或法律上的瑕疵（包括安全性、可靠性、准确性、完整性、有效性、特定目的适用性、安全保障等方面的缺陷、错误或故障）。</p>
+
+    <h2 id="zh-11">11. 责任限制</h2>
+    <p>除因我们的故意或重大过失导致外，我们对因本服务给用户造成的损失不承担任何责任。即使我们需承担责任，就付费服务而言，我们的责任范围以用户在造成该损失当月向我们支付的服务费用金额为上限。</p>
+
+    <h2 id="zh-12">12. 暂停使用・注销账户</h2>
+    <p>若用户违反本条款，或我们合理认定用户继续使用本服务不适当时，我们可在不事先通知的情况下暂停向该用户提供本服务，或注销其账户。用户可随时在应用内的设置页面自行删除账户，终止使用本服务。</p>
+
+    <h2 id="zh-13">13. 服务内容的变更・终止</h2>
+    <p>我们可在事先通知用户后，变更本服务的内容，或中断・终止本服务的提供。由此给用户造成的损失，我们不承担责任。</p>
+
+    <h2 id="zh-14">14. LINE联动相关注意事项</h2>
+    <p>LINE联动功能使用LINE株式会社提供的LINE Messaging API。使用该功能时，也适用LINE株式会社制定的使用条款及相关规范。因LINE方服务规格变更等原因，LINE联动功能的全部或部分可能会在不事先通知的情况下无法使用。</p>
+
+    <h2 id="zh-15">15. 本条款的变更</h2>
+    <p>我们在认为必要时，可通过通知用户的方式变更本条款。变更后的条款自公布于本页面之时起生效，用户在变更后继续使用本服务，即视为同意变更后的条款。</p>
+
+    <h2 id="zh-16">16. 可分割性</h2>
+    <p>即使本条款中的某一条款或部分内容被认定为无效或不可执行，本条款的其余部分仍将继续完全有效。</p>
+
+    <h2 id="zh-17">17. 适用法律・管辖</h2>
+    <p>本条款的解释适用日本法律。因本服务在开发者与用户之间产生争议时，以开发者住所地有管辖权的法院作为第一审的专属管辖法院。</p>
+
+    <h2 id="zh-18">18. 联系方式</h2>
+    <p>如对本条款有任何疑问，请通过以下方式联系我们：</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+</main>
+
+<script>
+  function setLang(l) {
+    document.getElementById('lang-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('lang-en').classList.toggle('on', l === 'en');
+    document.getElementById('lang-zh').classList.toggle('on', l === 'zh');
+    document.getElementById('btn-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('btn-en').classList.toggle('on', l === 'en');
+    document.getElementById('btn-zh').classList.toggle('on', l === 'zh');
+  }
+</script>

@@ -1,0 +1,409 @@
+<title>KakeiLog プライバシーポリシー / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --ink: #23261f;
+    --sub: #5c6357;
+    --line: #e1ddd0;
+    --accent: #24503a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  }
+  :root[data-theme="dark"] { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  :root[data-theme="light"] { --bg: #f7f6f2; --card: #ffffff; --ink: #23261f; --sub: #5c6357; --line: #e1ddd0; --accent: #24503a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+    line-height: 1.75;
+  }
+  .bar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .bar .brand { font-weight: 700; font-size: 0.95rem; }
+  .toggle { display: flex; gap: 6px; }
+  .toggle button {
+    font: inherit; font-size: 0.8rem; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--sub); cursor: pointer;
+  }
+  .toggle button.on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  main { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; text-wrap: balance; }
+  .updated { color: var(--sub); font-size: 0.82rem; margin: 0 0 12px; }
+  .toc { font-size: 0.85rem; color: var(--sub); margin: 0 0 32px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+  .toc a { color: var(--sub); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+  .toc ol { margin: 6px 0 0; padding-left: 1.2em; columns: 2; }
+  .toc li { margin-bottom: 4px; }
+  h2 { font-size: 1.05rem; margin: 2.2em 0 0.6em; border-top: 1px solid var(--line); padding-top: 1.4em; scroll-margin-top: 70px; }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.6em; }
+  h3 { font-size: 0.92rem; margin: 1.4em 0 0.5em; }
+  p, li { font-size: 0.92rem; color: var(--ink); }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.5em; }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 0.8em 0; }
+  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--card); font-weight: 700; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+
+  @page {
+    size: A4;
+    margin: 18mm 18mm 20mm;
+  }
+  @media print {
+    .bar { display: none !important; }
+    body { display: block; background: #fff; color: #000; }
+    main { margin: 0; max-width: 100%; padding: 0; }
+    .lang { display: block !important; }
+    #lang-en, #lang-zh { break-before: page; page-break-before: always; margin-top: 0; }
+    h2, h3, table, .toc, li, tr, thead { break-inside: avoid; page-break-inside: avoid; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+    thead { display: table-header-group; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    a::after { content: none !important; }
+  }
+</style>
+
+<div class="bar">
+  <span class="brand">KakeiLog</span>
+  <div class="toggle">
+    <button id="btn-ja" class="on" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
+</div>
+
+<main>
+  <div id="lang-ja" class="lang on">
+    <h1>KakeiLog プライバシーポリシー</h1>
+    <p class="updated">最終更新日: 2026年8月11日（第2版）</p>
+
+    <nav class="toc">
+      目次
+      <ol>
+        <li><a href="#ja-1">収集する情報</a></li>
+        <li><a href="#ja-2">情報の利用目的</a></li>
+        <li><a href="#ja-3">第三者への提供・共有</a></li>
+        <li><a href="#ja-4">利用する第三者サービス</a></li>
+        <li><a href="#ja-5">国際的なデータ移転</a></li>
+        <li><a href="#ja-6">Cookie等のトラッキング技術</a></li>
+        <li><a href="#ja-7">データの保存期間・削除</a></li>
+        <li><a href="#ja-8">セキュリティ</a></li>
+        <li><a href="#ja-9">利用者の権利</a></li>
+        <li><a href="#ja-10">お子様のプライバシー</a></li>
+        <li><a href="#ja-11">準拠法・管轄</a></li>
+        <li><a href="#ja-12">本ポリシーの変更</a></li>
+        <li><a href="#ja-13">お問い合わせ</a></li>
+      </ol>
+    </nav>
+
+    <p>本ポリシーは、個人開発者（以下「開発者」「当方」）が提供する家計簿アプリ「KakeiLog」（以下「本アプリ」）における、利用者の情報の取り扱いについて説明するものです。本アプリをダウンロード・利用することにより、利用者は本ポリシーの内容に同意したものとみなされます。本アプリの利用条件については、別途利用規約をご確認ください。</p>
+
+    <h2 id="ja-1">1. 収集する情報</h2>
+    <h3>(1) 利用者が入力する情報</h3>
+    <ul>
+      <li><strong>アカウント情報:</strong> メールアドレス、パスワード（Supabase Authにより暗号化・ハッシュ化して保存され、開発者を含め第三者が平文で閲覧することはできません）</li>
+      <li><strong>家計簿データ:</strong> 取引記録（金額・日付・カテゴリ・メモ）、ウォレット情報、予算、貯蓄目標、外部サブスクリプション管理情報、基軸通貨・表示通貨の設定</li>
+      <li><strong>LINE連携情報（任意機能を利用した場合のみ）:</strong> LINEユーザーIDと本アプリのアカウントの紐付け情報、LINE経由で送信されたメッセージ内容（取引記録として処理するため）</li>
+    </ul>
+    <h3>(2) 自動的に収集される情報</h3>
+    <ul>
+      <li>本アプリの利用に伴い、稼働基盤であるSupabase・Expo等のインフラを通じて、IPアドレス、デバイスの種類、OSバージョン、アプリのバージョン、エラー発生時のログといった技術情報が自動的に記録される場合があります。これらは主に不具合調査・不正利用防止のためにサーバーログとして一時的に保持されるものであり、広告目的の識別子（IDFA等）と結びつけて利用することはありません。</li>
+      <li>本アプリは現時点で、Google Analytics・Firebase Analytics等の行動分析SDKや広告SDKを組み込んでいません。今後導入する場合は本ポリシーを改定のうえ通知します。</li>
+    </ul>
+    <h3>(3) 課金情報（Premium機能利用時）</h3>
+    <p>サブスクリプションの購入・更新・解約状況を取得します。クレジットカード番号等の決済情報自体は開発者のサーバーには保存されず、Apple App Store / Google Play および決済管理サービスRevenueCatが処理・保有します。</p>
+    <h3>(4) 端末内でのみ処理される情報（サーバーへは送信されません）</h3>
+    <ul>
+      <li><strong>カメラ・写真:</strong> レシート撮影機能で使用します。画像はアプリ内で金額を読み取る処理（文字認識）にのみ利用され、その処理は端末内で完結し、画像自体を開発者のサーバーへ送信・保存することはありません。</li>
+      <li><strong>生体認証（Face ID・指紋認証等）:</strong> アプリロック機能を有効にした場合、OSが提供する生体認証によりアプリの起動を保護します。生体情報自体はOSが管理するものであり、開発者はこれを取得・保存しません。</li>
+      <li><strong>通知:</strong> リマインダーや予算超過等をお知らせするため、端末内でスケジュールされるローカル通知を使用します。外部の通知配信サーバーは使用していません。</li>
+    </ul>
+
+    <h2 id="ja-2">2. 情報の利用目的</h2>
+    <ul>
+      <li>本アプリの家計簿機能（通貨換算、LINE Bot連携、Premiumサブスクリプションを含む）を提供するため</li>
+      <li>アカウントの認証、なりすまし・不正利用の防止のため</li>
+      <li>不具合の調査・修正、サービスの維持・改善のため</li>
+      <li>お問い合わせへの対応のため</li>
+      <li>法令上の義務を履行するため</li>
+    </ul>
+    <p>取得した情報を、上記目的以外の広告配信やマーケティングメールの送信に利用することはありません。利用者の同意なく第三者へ販売・提供することもありません。</p>
+
+    <h2 id="ja-3">3. 第三者への提供・共有</h2>
+    <p>当方は、次の場合を除き、利用者の同意なく個人情報を第三者へ提供しません。</p>
+    <ul>
+      <li>下記「4. 利用する第三者サービス」に記載する委託先へ、サービス提供に必要な範囲で預ける場合</li>
+      <li>法令に基づき、裁判所・警察等の公的機関から開示を求められた場合</li>
+      <li>人の生命・身体・財産の保護のために必要があり、利用者の同意を得ることが困難な場合</li>
+      <li>事業の全部または一部を譲渡する場合（この場合、譲渡先においても本ポリシーに基づき取り扱われます）</li>
+    </ul>
+
+    <h2 id="ja-4">4. 利用する第三者サービス</h2>
+    <table>
+      <tr><th>サービス</th><th>用途</th></tr>
+      <tr><td>Supabase</td><td>データベース・認証基盤。本アプリの全データの保存先</td></tr>
+      <tr><td>LINE Messaging API</td><td>LINE連携機能を有効にした場合のみ、メッセージの送受信に利用</td></tr>
+      <tr><td>api.frankfurter.dev</td><td>為替レートの取得。個人を特定する情報は送信されません</td></tr>
+      <tr><td>RevenueCat / Apple App Store / Google Play</td><td>Premiumサブスクリプションの決済処理</td></tr>
+    </table>
+    <p>各サービスの情報の取り扱いについては、それぞれが公表するプライバシーポリシーもあわせてご確認ください。</p>
+
+    <h2 id="ja-5">5. 国際的なデータ移転</h2>
+    <p>本アプリが利用するSupabase等のインフラは、日本国外のサーバー上でデータを保存・処理する場合があります。この場合、利用者の情報は居住国以外の国・地域に移転されることがありますが、各委託先において適切な安全管理措置が講じられています。</p>
+
+    <h2 id="ja-6">6. Cookie等のトラッキング技術</h2>
+    <p>本アプリはネイティブモバイルアプリであり、ウェブサイトのようなCookieによるトラッキングは行っていません。前述のとおり、現時点で広告SDK・行動分析SDKも組み込んでいません。</p>
+
+    <h2 id="ja-7">7. データの保存期間・削除</h2>
+    <p>利用者のデータは、アカウントが存在する限り保存されます。利用者は、アプリ内の設定画面からいつでも自身のアカウントおよび関連する全データ（取引記録・ウォレット・予算・貯蓄目標・サブスク管理情報等）を完全に削除できます。削除操作後、当方のデータベースから速やかに削除され、復元することはできません。バックアップ等に一時的に残存する複製データについても、通常の運用サイクルの中で順次消去されます。</p>
+
+    <h2 id="ja-8">8. セキュリティ</h2>
+    <p>本アプリはRow Level Security（行レベルセキュリティ）により、利用者ごとにアクセス可能なデータを制限しています。また、通信はすべて暗号化（HTTPS/TLS）されています。万が一、個人情報の漏えい等のセキュリティインシデントが発生した場合は、法令に従い、必要な範囲で速やかに利用者への通知および監督機関への報告を行います。</p>
+
+    <h2 id="ja-9">9. 利用者の権利</h2>
+    <p>利用者は、自身の個人情報について、開示・訂正・追加・削除・利用停止を求めることができます。多くの項目はアプリ内で直接編集・削除が可能ですが、それ以外のご請求は「13. お問い合わせ」の連絡先までご連絡ください。合理的な期間内に対応します。</p>
+    <p>EU域内など、GDPR（一般データ保護規則）の適用を受ける利用者の方は、上記に加えてデータポータビリティの権利、処理の制限を求める権利、異議を申し立てる権利、および監督機関に苦情を申し立てる権利を有します。カリフォルニア州等、CCPA/CPRAの適用を受ける利用者の方は、収集した個人情報の開示請求、削除請求、および個人情報の「販売」のオプトアウトを求める権利を有します（前述のとおり、当方は個人情報を販売していません）。</p>
+
+    <h2 id="ja-10">10. お子様のプライバシー</h2>
+    <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはなく、そのような情報を入手したことが判明した場合は速やかに削除します。</p>
+
+    <h2 id="ja-11">11. 準拠法・管轄</h2>
+    <p>本ポリシーの解釈にあたっては日本法を準拠法とします。本ポリシーおよび本アプリの利用に関して紛争が生じた場合、開発者の住所地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+    <h2 id="ja-12">12. 本ポリシーの変更</h2>
+    <p>本ポリシーの内容は、法令の変更や本アプリの機能追加に伴い変更されることがあります。内容を変更した場合は、本ページ上の「最終更新日」を更新し、重要な変更がある場合はアプリ内でお知らせします。変更後の本ポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
+
+    <h2 id="ja-13">13. お問い合わせ</h2>
+    <p>本ポリシーおよび個人情報の取り扱いに関するお問い合わせ・開示等の請求は、下記までご連絡ください。</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+
+  <div id="lang-en" class="lang">
+    <h1>KakeiLog Privacy Policy</h1>
+    <p class="updated">Last updated: August 11, 2026 (v2)</p>
+
+    <nav class="toc">
+      Contents
+      <ol>
+        <li><a href="#en-1">Information We Collect</a></li>
+        <li><a href="#en-2">How We Use Information</a></li>
+        <li><a href="#en-3">Disclosure to Third Parties</a></li>
+        <li><a href="#en-4">Third-Party Services We Use</a></li>
+        <li><a href="#en-5">International Data Transfers</a></li>
+        <li><a href="#en-6">Cookies and Tracking</a></li>
+        <li><a href="#en-7">Data Retention and Deletion</a></li>
+        <li><a href="#en-8">Security</a></li>
+        <li><a href="#en-9">Your Rights</a></li>
+        <li><a href="#en-10">Children's Privacy</a></li>
+        <li><a href="#en-11">Governing Law</a></li>
+        <li><a href="#en-12">Changes to This Policy</a></li>
+        <li><a href="#en-13">Contact</a></li>
+      </ol>
+    </nav>
+
+    <p>This policy explains how the independent developer ("we", "the developer") behind the household budgeting app KakeiLog ("the App") collects, uses, and protects user information. By downloading or using the App, you agree to the terms of this policy. For the conditions under which you may use the App, please see our Terms of Service.</p>
+
+    <h2 id="en-1">1. Information We Collect</h2>
+    <h3>(1) Information you provide</h3>
+    <ul>
+      <li><strong>Account information:</strong> Email address and password (encrypted and hashed by Supabase Auth; neither we nor any third party can view it in plain text)</li>
+      <li><strong>Budgeting data:</strong> Transactions you enter (amount, date, category, memo), wallets, budgets, savings goals, external subscription-tracking information, and your base/display currency settings</li>
+      <li><strong>LINE integration data (optional feature only):</strong> The link between your LINE user ID and your App account, and the content of messages you send via LINE (processed to create transaction records)</li>
+    </ul>
+    <h3>(2) Information collected automatically</h3>
+    <ul>
+      <li>Through the infrastructure the App runs on (Supabase, Expo, etc.), technical information such as IP address, device type, OS version, app version, and error logs may be recorded automatically. This is used primarily for debugging and abuse prevention as temporary server logs, and is not linked to advertising identifiers (such as IDFA).</li>
+      <li>The App does not currently include any behavioral-analytics SDK (e.g. Google Analytics, Firebase Analytics) or advertising SDK. If this changes in the future, we will update this policy and notify users.</li>
+    </ul>
+    <h3>(3) Billing information (Premium feature only)</h3>
+    <p>We receive subscription purchase, renewal, and cancellation status. Payment details such as card numbers are never stored on our servers — they are handled by the Apple App Store / Google Play and by RevenueCat, our subscription management provider.</p>
+    <h3>(4) Information processed only on your device (never sent to our servers)</h3>
+    <ul>
+      <li><strong>Camera / photos:</strong> Used for the receipt-scanning feature. Images are processed on-device (text recognition to detect the total amount) and are never uploaded to or stored on our servers.</li>
+      <li><strong>Biometric authentication (Face ID, fingerprint, etc.):</strong> If you enable the App Lock feature, your device's own biometric authentication protects access to the App. Biometric data is managed entirely by your device's operating system; we never collect or store it.</li>
+      <li><strong>Notifications:</strong> Reminders and budget-exceeded alerts are scheduled locally on your device. We do not use any external push-notification server.</li>
+    </ul>
+
+    <h2 id="en-2">2. How We Use Information</h2>
+    <ul>
+      <li>To provide the App's budgeting features, including currency conversion, LINE bot integration, and Premium subscriptions</li>
+      <li>To authenticate accounts and prevent impersonation or misuse</li>
+      <li>To investigate and fix bugs, and to maintain and improve the service</li>
+      <li>To respond to support inquiries</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not use your information for advertising or marketing emails beyond the above, and we do not sell or share it with third parties without your consent.</p>
+
+    <h2 id="en-3">3. Disclosure to Third Parties</h2>
+    <p>We do not disclose personal information to third parties without your consent, except:</p>
+    <ul>
+      <li>To the service providers listed in "4. Third-Party Services We Use," to the extent necessary to operate the App</li>
+      <li>When required by law, court order, or a request from a public authority</li>
+      <li>When necessary to protect the life, safety, or property of a person and obtaining consent is impracticable</li>
+      <li>In connection with a merger, acquisition, or sale of all or part of our business (in which case the recipient remains bound by this policy)</li>
+    </ul>
+
+    <h2 id="en-4">4. Third-Party Services We Use</h2>
+    <table>
+      <tr><th>Service</th><th>Purpose</th></tr>
+      <tr><td>Supabase</td><td>Database and authentication backend; stores all App data</td></tr>
+      <tr><td>LINE Messaging API</td><td>Used only if you enable LINE integration, to send/receive messages</td></tr>
+      <tr><td>api.frankfurter.dev</td><td>Fetches exchange rates; no personally identifying information is sent</td></tr>
+      <tr><td>RevenueCat / Apple App Store / Google Play</td><td>Payment processing for the Premium subscription</td></tr>
+    </table>
+    <p>Please also refer to each provider's own privacy policy for details on how they handle information.</p>
+
+    <h2 id="en-5">5. International Data Transfers</h2>
+    <p>The infrastructure the App relies on, including Supabase, may store and process data on servers located outside your country of residence. When this occurs, appropriate safeguards are maintained by each provider.</p>
+
+    <h2 id="en-6">6. Cookies and Tracking</h2>
+    <p>The App is a native mobile app and does not use website-style cookie tracking. As noted above, it does not currently include any advertising or behavioral-analytics SDK.</p>
+
+    <h2 id="en-7">7. Data Retention and Deletion</h2>
+    <p>Your data is retained for as long as your account exists. You can permanently delete your account and all associated data (transactions, wallets, budgets, savings goals, subscription-tracking information, etc.) at any time from the in-app Settings screen. Once deleted, data is promptly removed from our database and cannot be recovered. Any temporary copies retained in backups are cleared through our normal operational cycle.</p>
+
+    <h2 id="en-8">8. Security</h2>
+    <p>The App uses Row Level Security to restrict each user's access to their own data only, and all network traffic is encrypted (HTTPS/TLS). In the unlikely event of a security incident affecting personal information, we will notify affected users and relevant authorities as required by applicable law.</p>
+
+    <h2 id="en-9">9. Your Rights</h2>
+    <p>You may request access to, correction of, addition to, deletion of, or restriction on the use of your personal information. Most of this can be done directly in the App; for anything else, please contact us using the details in "13. Contact" and we will respond within a reasonable time.</p>
+    <p>If you are located in the EEA/UK, you also have the right to data portability, the right to restrict or object to processing, and the right to lodge a complaint with your local supervisory authority. If you are a California resident, you have the right to know what personal information we have collected, to request deletion, and to opt out of the "sale" of personal information (as noted above, we do not sell personal information).</p>
+
+    <h2 id="en-10">10. Children's Privacy</h2>
+    <p>The App is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If we learn we have inadvertently collected such information, we will delete it promptly.</p>
+
+    <h2 id="en-11">11. Governing Law</h2>
+    <p>This policy is governed by the laws of Japan. Any dispute arising from this policy or your use of the App shall be subject to the exclusive jurisdiction of the court having jurisdiction over the developer's place of residence as the court of first instance.</p>
+
+    <h2 id="en-12">12. Changes to This Policy</h2>
+    <p>This policy may change as laws change or as we add features to the App. When we make changes, we will update the "Last updated" date on this page and, for material changes, notify users within the App. Updated versions take effect from the moment they are posted here.</p>
+
+    <h2 id="en-13">13. Contact</h2>
+    <p>For questions about this policy, or to make a request regarding your personal information, please contact:</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+
+  <div id="lang-zh" class="lang">
+    <h1>KakeiLog 隐私政策</h1>
+    <p class="updated">最后更新日期：2026年8月11日（第2版）</p>
+
+    <nav class="toc">
+      目录
+      <ol>
+        <li><a href="#zh-1">我们收集的信息</a></li>
+        <li><a href="#zh-2">信息的使用目的</a></li>
+        <li><a href="#zh-3">向第三方提供・共享信息</a></li>
+        <li><a href="#zh-4">我们使用的第三方服务</a></li>
+        <li><a href="#zh-5">跨境数据传输</a></li>
+        <li><a href="#zh-6">Cookie等跟踪技术</a></li>
+        <li><a href="#zh-7">数据的保存期限・删除</a></li>
+        <li><a href="#zh-8">安全性</a></li>
+        <li><a href="#zh-9">用户的权利</a></li>
+        <li><a href="#zh-10">儿童隐私</a></li>
+        <li><a href="#zh-11">适用法律・管辖</a></li>
+        <li><a href="#zh-12">本政策的变更</a></li>
+        <li><a href="#zh-13">联系方式</a></li>
+      </ol>
+    </nav>
+
+    <p>本政策说明个人开发者（以下称“开发者”“我们”）提供的家庭记账应用「KakeiLog」（以下称“本应用”）如何处理用户信息。下载或使用本应用即视为您同意本政策的内容。关于本应用的使用条件，请另行查阅服务条款。</p>
+
+    <h2 id="zh-1">1. 我们收集的信息</h2>
+    <h3>(1) 用户输入的信息</h3>
+    <ul>
+      <li><strong>账户信息：</strong>电子邮件地址、密码（由Supabase Auth加密并哈希保存，开发者及其他任何第三方均无法以明文查看）</li>
+      <li><strong>记账数据：</strong>用户输入的交易记录（金额・日期・类别・备注）、钱包信息、预算、储蓄目标、外部订阅管理信息、本位货币・显示货币设置</li>
+      <li><strong>LINE联动信息（仅在使用该可选功能时）：</strong>LINE用户ID与本应用账户的关联信息，以及通过LINE发送的消息内容（用于生成交易记录）</li>
+    </ul>
+    <h3>(2) 自动收集的信息</h3>
+    <ul>
+      <li>在使用本应用过程中，通过Supabase、Expo等运行基础设施，可能会自动记录IP地址、设备类型、操作系统版本、应用版本、错误日志等技术信息。这些信息主要用于故障排查和防止滥用，作为服务器日志临时保存，不会与广告标识符（如IDFA）关联使用。</li>
+      <li>本应用目前未内置Google Analytics、Firebase Analytics等行为分析SDK或广告SDK。如未来引入此类功能，我们将修订本政策并通知用户。</li>
+    </ul>
+    <h3>(3) 计费信息（仅限使用Premium功能时）</h3>
+    <p>我们会获取订阅的购买・续订・取消状态。信用卡号等支付信息本身不会保存在开发者的服务器上，而是由Apple App Store / Google Play以及订阅管理服务RevenueCat处理和保管。</p>
+    <h3>(4) 仅在设备本地处理的信息（不会发送至服务器）</h3>
+    <ul>
+      <li><strong>相机・照片：</strong>用于小票扫描功能。图像仅在设备本地进行处理（文字识别以读取金额），不会上传或保存至开发者的服务器。</li>
+      <li><strong>生物识别（Face ID・指纹等）：</strong>启用应用锁功能后，将使用您设备操作系统提供的生物识别功能保护应用的访问。生物特征信息本身由操作系统管理，开发者不会获取或保存。</li>
+      <li><strong>通知：</strong>提醒、预算超支等通知均通过设备本地调度实现，我们不使用任何外部推送通知服务器。</li>
+    </ul>
+
+    <h2 id="zh-2">2. 信息的使用目的</h2>
+    <ul>
+      <li>提供本应用的记账功能（包括货币换算、LINE Bot联动、Premium订阅）</li>
+      <li>用于账户认证，防止冒用及不当使用</li>
+      <li>用于故障调查・修复，以及服务的维护・改进</li>
+      <li>用于回复咨询</li>
+      <li>用于履行法律义务</li>
+    </ul>
+    <p>我们不会将所获取的信息用于上述目的以外的广告投放或营销邮件发送，也不会未经用户同意向第三方出售或提供。</p>
+
+    <h2 id="zh-3">3. 向第三方提供・共享信息</h2>
+    <p>除以下情况外，我们不会在未经用户同意的情况下向第三方提供个人信息：</p>
+    <ul>
+      <li>在提供服务所需的范围内，委托给下文「4. 我们使用的第三方服务」中列出的服务商</li>
+      <li>依据法律法规，应法院、警方等公共机关要求披露</li>
+      <li>为保护人身生命、身体或财产安全而有必要，且难以取得用户同意时</li>
+      <li>公司业务全部或部分转让时（此时受让方也将依据本政策处理相关信息）</li>
+    </ul>
+
+    <h2 id="zh-4">4. 我们使用的第三方服务</h2>
+    <table>
+      <tr><th>服务</th><th>用途</th></tr>
+      <tr><td>Supabase</td><td>数据库与身份验证基础设施，保存本应用的全部数据</td></tr>
+      <tr><td>LINE Messaging API</td><td>仅在启用LINE联动功能时用于消息收发</td></tr>
+      <tr><td>api.frankfurter.dev</td><td>用于获取汇率，不会发送任何可识别个人身份的信息</td></tr>
+      <tr><td>RevenueCat / Apple App Store / Google Play</td><td>用于处理Premium订阅的支付</td></tr>
+    </table>
+    <p>关于各服务商对信息的处理方式，请同时参阅其各自公布的隐私政策。</p>
+
+    <h2 id="zh-5">5. 跨境数据传输</h2>
+    <p>本应用所依赖的Supabase等基础设施，可能会在日本境外的服务器上存储和处理数据。在此情况下，用户信息可能被传输至其居住国以外的国家或地区，但各服务商均已采取适当的安全管理措施。</p>
+
+    <h2 id="zh-6">6. Cookie等跟踪技术</h2>
+    <p>本应用为原生移动应用，不会像网站那样使用Cookie进行跟踪。如前所述，本应用目前也未内置广告SDK或行为分析SDK。</p>
+
+    <h2 id="zh-7">7. 数据的保存期限・删除</h2>
+    <p>只要账户存在，用户数据将持续保存。用户可随时在应用内的设置页面完全删除自己的账户及相关全部数据（交易记录、钱包、预算、储蓄目标、订阅管理信息等）。删除操作后，数据将从我们的数据库中迅速删除，且无法恢复。备份中暂时保留的副本数据，也会在正常运营周期中依次清除。</p>
+
+    <h2 id="zh-8">8. 安全性</h2>
+    <p>本应用通过行级安全策略（Row Level Security）限制每位用户可访问的数据范围。所有通信均经过加密（HTTPS/TLS）。若发生涉及个人信息泄露等安全事件，我们将依照法律法规，在必要范围内及时通知受影响用户并向监管机构报告。</p>
+
+    <h2 id="zh-9">9. 用户的权利</h2>
+    <p>用户可就自己的个人信息要求查阅、更正、补充、删除或停止使用。大部分操作可在应用内直接完成，其他请求请通过「13. 联系方式」中的联系方式与我们联系，我们将在合理期限内回应。</p>
+    <p>若您位于受GDPR（《通用数据保护条例》）管辖的欧盟等地区，除上述权利外，您还享有数据可携权、要求限制处理的权利、提出异议的权利，以及向监管机构投诉的权利。若您是受CCPA/CPRA管辖的加利福尼亚州等地区居民，您有权要求披露已收集的个人信息、要求删除，以及选择退出个人信息的“出售”（如前所述，我们不会出售个人信息）。</p>
+
+    <h2 id="zh-10">10. 儿童隐私</h2>
+    <p>本应用不面向13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息，若发现已意外获取此类信息，将及时删除。</p>
+
+    <h2 id="zh-11">11. 适用法律・管辖</h2>
+    <p>本政策的解释适用日本法律。因本政策或本应用的使用产生的任何争议，均以开发者住所地有管辖权的法院作为第一审的专属管辖法院。</p>
+
+    <h2 id="zh-12">12. 本政策的变更</h2>
+    <p>本政策内容可能因法律法规变更或本应用功能新增而发生变化。如有变更，我们将更新本页面上的“最后更新日期”，如有重大变更，将在应用内通知用户。变更后的政策自公布于本页面之时起生效。</p>
+
+    <h2 id="zh-13">13. 联系方式</h2>
+    <p>如对本政策或个人信息处理方式有任何疑问・请求，请通过以下方式联系我们：</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+  </div>
+</main>
+
+<script>
+  function setLang(l) {
+    document.getElementById('lang-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('lang-en').classList.toggle('on', l === 'en');
+    document.getElementById('lang-zh').classList.toggle('on', l === 'zh');
+    document.getElementById('btn-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('btn-en').classList.toggle('on', l === 'en');
+    document.getElementById('btn-zh').classList.toggle('on', l === 'zh');
+  }
+</script>
