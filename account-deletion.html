@@ -1,0 +1,174 @@
+<title>KakeiLog アカウント・データの削除 / Delete Account &amp; Data</title>
+<!-- このページは「アカウントごと削除」と「データのみ削除(アカウントは維持)」の両方を案内する。
+     Google Play データセーフティの「アカウント削除用URL」「データ削除用URL」の両欄で同じこのURLを使う。 -->
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --ink: #23261f;
+    --sub: #5c6357;
+    --line: #e1ddd0;
+    --accent: #24503a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  }
+  :root[data-theme="dark"] { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  :root[data-theme="light"] { --bg: #f7f6f2; --card: #ffffff; --ink: #23261f; --sub: #5c6357; --line: #e1ddd0; --accent: #24503a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+    line-height: 1.75;
+  }
+  .bar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .bar .brand { font-weight: 700; font-size: 0.95rem; }
+  .toggle { display: flex; gap: 6px; }
+  .toggle button {
+    font: inherit; font-size: 0.8rem; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--sub); cursor: pointer;
+  }
+  .toggle button.on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  main { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; text-wrap: balance; }
+  .updated { color: var(--sub); font-size: 0.82rem; margin: 0 0 24px; }
+  h2 { font-size: 1.05rem; margin: 2.2em 0 0.6em; border-top: 1px solid var(--line); padding-top: 1.4em; }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.6em; }
+  p, li { font-size: 0.92rem; color: var(--ink); }
+  ol, ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.6em; }
+  a { color: var(--accent); }
+  .steps { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 0.8em 0; }
+  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--card); font-weight: 700; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+</style>
+
+<div class="bar">
+  <span class="brand">KakeiLog</span>
+  <div class="toggle">
+    <button id="btn-ja" class="on" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<main>
+  <div id="lang-ja" class="lang on">
+    <h1>アカウント・データの削除</h1>
+    <p class="updated">最終更新日: 2026年8月18日</p>
+
+    <p>家計簿アプリ「KakeiLog」（<code>com.jota.kakeilog</code>）では、アプリ内から自分のアカウントと関連データをいつでも完全に削除できます。「アカウントごと削除する」方法と、「アカウントは残したまま家計簿データだけ削除する」方法の2種類があり、どちらも特別な申請やお問い合わせは不要です。</p>
+
+    <h2>方法A: アカウントごと削除する</h2>
+    <p>ログイン情報を含めて完全に削除し、二度と同じアカウントとしてログインできなくします。</p>
+    <div class="steps">
+      <ol>
+        <li>KakeiLogアプリを開き、ログインする</li>
+        <li>下部タブから「設定」を開く</li>
+        <li>「アカウント」セクションにある「アカウントを削除」をタップする</li>
+        <li>確認ダイアログで内容を確認し、削除を実行する</li>
+      </ol>
+    </div>
+    <p>削除を実行すると、その場でアカウントおよび関連データが完全に削除されます。削除後は同じメールアドレスで再度サインアップすることで新規アカウントとして利用を再開できます（過去のデータは復元されません）。</p>
+
+    <h2>方法B: データのみ削除する（アカウントは維持）</h2>
+    <p>ログイン情報はそのまま残し、取引記録・ウォレット・予算等の家計簿データだけを削除して初期状態に戻します。</p>
+    <div class="steps">
+      <ol>
+        <li>KakeiLogアプリを開き、ログインする</li>
+        <li>下部タブから「設定」を開く</li>
+        <li>「全データを削除」をタップする</li>
+        <li>確認ダイアログで内容を確認し、削除を実行する</li>
+      </ol>
+    </div>
+    <p>実行すると、家計簿データが完全に削除されたうえで初期状態（デフォルトのウォレット・カテゴリ）から再開できます。ログイン情報・アカウント自体は削除されません。</p>
+
+    <h2>削除される情報</h2>
+    <table>
+      <tr><th>データの種類</th><th>方法A（アカウントごと）</th><th>方法B（データのみ）</th></tr>
+      <tr><td>ログイン情報（メールアドレス・パスワード）</td><td>削除される</td><td>残る</td></tr>
+      <tr><td>取引記録・ウォレット・カテゴリ</td><td>削除される</td><td>削除される</td></tr>
+      <tr><td>予算・貯蓄目標</td><td>削除される</td><td>削除される</td></tr>
+      <tr><td>外部サブスクリプション管理情報</td><td>削除される</td><td>削除される</td></tr>
+      <tr><td>通貨・表示設定等のユーザー設定</td><td>削除される</td><td>残る</td></tr>
+      <tr><td>LINE連携情報（連携している場合）</td><td>削除される</td><td>残る</td></tr>
+      <tr><td>Premiumサブスクリプションの購入履歴</td><td colspan="2">Apple App Store / Google Play / RevenueCat側の記録として残る場合があります（決済事業者の保持ポリシーに準拠）</td></tr>
+    </table>
+    <p>いずれの削除も取り消せません。削除後、当方のデータベースに復元可能な形でデータが残ることはありません。</p>
+
+    <h2>アプリを削除・アンインストールしただけの場合</h2>
+    <p>端末からアプリをアンインストールしただけでは、アカウントとサーバー上のデータは削除されません。データを完全に削除したい場合は、必ずアンインストール前に上記の手順でアカウント削除を行ってください。</p>
+
+    <h2>お問い合わせ</h2>
+    <p>アプリを起動できない等の理由でアプリ内から削除手続きができない場合は、下記までご連絡ください。本人確認のうえ対応します。</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+    <p>詳しい取り扱いは<a href="./privacy-policy.html">プライバシーポリシー</a>もあわせてご確認ください。</p>
+  </div>
+
+  <div id="lang-en" class="lang">
+    <h1>Delete Your Account &amp; Data</h1>
+    <p class="updated">Last updated: August 18, 2026</p>
+
+    <p>In the KakeiLog budgeting app (<code>com.jota.kakeilog</code>), you can permanently delete your account and related data at any time, directly from within the app. There are two options — deleting the account entirely, or deleting just your budgeting data while keeping the account — and neither requires a request or support ticket.</p>
+
+    <h2>Option A: Delete your account entirely</h2>
+    <p>Permanently removes your login credentials along with all data. You will not be able to sign back into the same account afterward.</p>
+    <div class="steps">
+      <ol>
+        <li>Open the KakeiLog app and sign in</li>
+        <li>Go to the "Settings" tab</li>
+        <li>Under the "Account" section, tap "Delete Account"</li>
+        <li>Review the confirmation dialog and confirm deletion</li>
+      </ol>
+    </div>
+    <p>Your account and all related data are permanently deleted immediately. After deletion, you can sign up again with the same email address to start a fresh account (previous data cannot be recovered).</p>
+
+    <h2>Option B: Delete only your data (keep the account)</h2>
+    <p>Keeps your login credentials but permanently deletes your budgeting data (transactions, wallets, budgets, etc.), resetting the app to its initial state.</p>
+    <div class="steps">
+      <ol>
+        <li>Open the KakeiLog app and sign in</li>
+        <li>Go to the "Settings" tab</li>
+        <li>Tap "Delete All Data"</li>
+        <li>Review the confirmation dialog and confirm deletion</li>
+      </ol>
+    </div>
+    <p>Your budgeting data is permanently deleted and the app resets to its default wallets and categories. Your login credentials and account itself are not removed.</p>
+
+    <h2>What gets deleted</h2>
+    <table>
+      <tr><th>Data</th><th>Option A (whole account)</th><th>Option B (data only)</th></tr>
+      <tr><td>Login credentials (email, password)</td><td>Deleted</td><td>Kept</td></tr>
+      <tr><td>Transactions, wallets, categories</td><td>Deleted</td><td>Deleted</td></tr>
+      <tr><td>Budgets and savings goals</td><td>Deleted</td><td>Deleted</td></tr>
+      <tr><td>External subscription-tracking data</td><td>Deleted</td><td>Deleted</td></tr>
+      <tr><td>Currency and display settings</td><td>Deleted</td><td>Kept</td></tr>
+      <tr><td>LINE integration link (if connected)</td><td>Deleted</td><td>Kept</td></tr>
+      <tr><td>Premium subscription purchase history</td><td colspan="2">May be retained by Apple App Store / Google Play / RevenueCat per their own retention policies</td></tr>
+    </table>
+    <p>Neither deletion option can be undone. No recoverable copy of your data remains in our database afterward.</p>
+
+    <h2>Just uninstalling the app?</h2>
+    <p>Uninstalling the app from your device does not delete your account or server-side data. If you want your data fully removed, complete the deletion steps above before uninstalling.</p>
+
+    <h2>Contact</h2>
+    <p>If you're unable to access the app to complete this process, please contact us below and we will verify your identity and assist.</p>
+    <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+    <p>See also our <a href="./privacy-policy.html">Privacy Policy</a> for more details.</p>
+  </div>
+</main>
+
+<script>
+  function setLang(l) {
+    document.getElementById('lang-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('lang-en').classList.toggle('on', l === 'en');
+    document.getElementById('btn-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('btn-en').classList.toggle('on', l === 'en');
+  }
+</script>
