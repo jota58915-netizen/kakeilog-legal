@@ -1,0 +1,127 @@
+<title>KakeiLog サポート / Support</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --ink: #23261f;
+    --sub: #5c6357;
+    --line: #e1ddd0;
+    --accent: #24503a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  }
+  :root[data-theme="dark"] { --bg: #14160f; --card: #1c2018; --ink: #e9ebe2; --sub: #a3ab99; --line: #33392c; --accent: #7fb28c; }
+  :root[data-theme="light"] { --bg: #f7f6f2; --card: #ffffff; --ink: #23261f; --sub: #5c6357; --line: #e1ddd0; --accent: #24503a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+    line-height: 1.75;
+  }
+  .bar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .bar .brand { font-weight: 700; font-size: 0.95rem; }
+  .toggle { display: flex; gap: 6px; }
+  .toggle button {
+    font: inherit; font-size: 0.8rem; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--sub); cursor: pointer;
+  }
+  .toggle button.on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  main { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.5rem; margin: 0 0 6px; text-wrap: balance; }
+  .updated { color: var(--sub); font-size: 0.82rem; margin: 0 0 24px; }
+  h2 { font-size: 1.05rem; margin: 2.2em 0 0.6em; border-top: 1px solid var(--line); padding-top: 1.4em; }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.6em; }
+  p, li { font-size: 0.92rem; color: var(--ink); }
+  ol, ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.6em; }
+  a { color: var(--accent); }
+  .steps { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; }
+  .contact { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; margin: 1em 0; }
+  .contact a { font-weight: 700; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+</style>
+
+<div class="bar">
+  <span class="brand">KakeiLog</span>
+  <div class="toggle">
+    <button id="btn-ja" class="on" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<main>
+  <div id="lang-ja" class="lang on">
+    <h1>サポート</h1>
+    <p class="updated">最終更新日: 2026年9月28日</p>
+
+    <p>家計簿アプリ「KakeiLog」（<code>com.jota.kakeilog</code>）のサポートページです。不具合の報告、使い方に関するご質問、ご要望などがありましたら、下記の連絡先までご連絡ください。</p>
+
+    <div class="contact">
+      <p>お問い合わせ先</p>
+      <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+      <p style="color: var(--sub); font-size: 0.85rem;">通常2〜3営業日以内に返信します。</p>
+    </div>
+
+    <h2>よくあるご質問</h2>
+    <p><strong>Q. ログインできません</strong><br>メールアドレスとパスワードが正しいかご確認ください。パスワードを忘れた場合はログイン画面の「パスワードをお忘れですか？」から再設定できます。</p>
+    <p><strong>Q. LINEで記録しても反映されません</strong><br>「カテゴリ 金額 ウォレット」のように、カテゴリ・金額・ウォレット名を順不同でスペース区切りで送ってください（例: 食費 500 現金）。うまく反映されない場合は、アプリ側に登録済みのカテゴリ名・ウォレット名に近い単語を使うと認識されやすくなります。</p>
+    <p><strong>Q. アカウントやデータを削除したい</strong><br><a href="./account-deletion.html">アカウント・データの削除</a>ページの手順をご確認ください。</p>
+    <p><strong>Q. 個人情報の取り扱いについて知りたい</strong><br><a href="./privacy-policy.html">プライバシーポリシー</a>をご確認ください。</p>
+
+    <h2>不具合を報告する際のお願い</h2>
+    <div class="steps">
+      <ul>
+        <li>発生した操作の手順（何を入力・タップしたか）</li>
+        <li>期待した動作と、実際に起きたこと</li>
+        <li>お使いの端末とOSのバージョン（例: iPhone 15, iOS 18）</li>
+        <li>可能であればスクリーンショット</li>
+      </ul>
+    </div>
+    <p>上記の情報をいただけると、調査・対応がスムーズになります。</p>
+  </div>
+
+  <div id="lang-en" class="lang">
+    <h1>Support</h1>
+    <p class="updated">Last updated: September 28, 2026</p>
+
+    <p>This is the support page for the KakeiLog budgeting app (<code>com.jota.kakeilog</code>). If you'd like to report a bug, ask a question about how to use the app, or share feedback, please contact us below.</p>
+
+    <div class="contact">
+      <p>Contact</p>
+      <p><a href="mailto:jota58915@gmail.com">jota58915@gmail.com</a></p>
+      <p style="color: var(--sub); font-size: 0.85rem;">We typically reply within 2-3 business days.</p>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q. I can't sign in</strong><br>Please double-check your email address and password. If you forgot your password, use "Forgot your password?" on the sign-in screen to reset it.</p>
+    <p><strong>Q. Recording via LINE doesn't show up</strong><br>Send a message like "category amount wallet" — the category, amount, and wallet name can be in any order, separated by spaces (e.g. "food 500 cash"). If it's still not recognized, try using words closer to the category/wallet names already set up in the app.</p>
+    <p><strong>Q. I want to delete my account or data</strong><br>See the steps on the <a href="./account-deletion.html">Delete Account &amp; Data</a> page.</p>
+    <p><strong>Q. How is my personal data handled?</strong><br>Please see our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+
+    <h2>When reporting a bug</h2>
+    <div class="steps">
+      <ul>
+        <li>The steps you took (what you tapped or entered)</li>
+        <li>What you expected to happen vs. what actually happened</li>
+        <li>Your device and OS version (e.g. iPhone 15, iOS 18)</li>
+        <li>A screenshot, if possible</li>
+      </ul>
+    </div>
+    <p>Including this information helps us investigate and respond faster.</p>
+  </div>
+</main>
+
+<script>
+  function setLang(l) {
+    document.getElementById('lang-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('lang-en').classList.toggle('on', l === 'en');
+    document.getElementById('btn-ja').classList.toggle('on', l === 'ja');
+    document.getElementById('btn-en').classList.toggle('on', l === 'en');
+  }
+</script>
